@@ -1,0 +1,15 @@
+/* Aquí puedes añadir estilos personalizados si es necesario, por ejemplo: */
+body {
+    background-color: #f8f9fa; /* Un fondo claro de Bootstrap */
+}
+
+/* Estilos para el encabezado */
+header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    padding: 50px 0;
+}
