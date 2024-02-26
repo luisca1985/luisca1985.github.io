@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Portfolio</title>
     <!-- Enlace a CSS de Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Enlace a tu CSS personalizado -->
     <link rel="stylesheet" href="styles.css">
     <!-- favicon -->
@@ -15,17 +15,148 @@
     <div class="container text-center">
         <!-- Encabezado -->
         <header class="my-5">
-            <img src="profile_image.jpg" alt="Profile Image" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px;">
+            <img src="img/profile_image.jpg" alt="Profile Image" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px;">
             <h1>Luis Camilo Jiménez Álvarez</h1>
             <p>Data Scientist</p>
+            <p><a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=luis-camilo-jimenez" target="_blank">Follow on LinkedIn</a></p>
         </header>
-
         <!-- Contenido principal -->
         <main class="mb-5">
-            <p class="mb-3">This portfolio is currently under construction. Check back soon to see my featured projects! In the meantime</p>
-            <!-- <p class="mb-3">This portfolio is currently under construction. Check back soon to see my featured projects! In the meantime, connect with me on <a href="https://www.linkedin.com/in/luis-camilo-jimenez/" target="_blank">LinkedIn</a>.</p> -->
-            <p><a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=luis-camilo-jimenez" target="_blank">Follow on LinkedIn</a></p>
-            <!-- <p><a href="mailto:luisca1985@gmail.com" class="btn btn-primary">Contact me</a></p> -->
+            <div class="container">
+                <h2>Project Groups</h2>
+                <div class="row">
+                  <!-- LinkedIn Newsletter -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <img src="img/newsletter_image.webp" class="card-img-top" alt="Project Image">
+                      <div class="card-body">
+                        <h5 class="card-title">LinkedIn Newsletters</h5>
+                        <p class="card-text">Description.</p>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              View Newsletters
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#ai_and_data_insights">IA & Data Insights</a></li>
+                              <li style="display: none;"><a class="dropdown-item" href="newsletter_projects.html#nl2">Option</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Grupo de proyectos oculto (style="display: none;") -->
+                  <div class="col-md-4 mb-4" style="display: none;">
+                    <div class="card">
+                      <img src="newsletter_image.webp" class="card-img-top" alt="Project Image">
+                      <div class="card-body">
+                        <h5 class="card-title">Newsletter 1</h5>
+                        <p class="card-text">Detailed description of Newsletter 1.</p>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              View Newsletters
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="newsletter_projects.html#nl1">NL1</a></li>
+                              <li><a class="dropdown-item" href="newsletter_projects.html#nl2">NL2</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              
+
+              <div class="container">
+                <h2 id="ai_and_data_insights">LinkedIn Newsletters</h2>
+                <div class="row">
+                    <h3 id="ai_and_data_insights">IA & Data Insights</h3>
+                    <!-- Repite para otros proyectos -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card">
+                        <div class="image-container">
+                              <img src="img/math_models_image.webp" class="card-img-top" alt="Project Image">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Modelos Matemáticos: Desvelando Conexiones</h5>
+                          <p class="card-text">Los modelos matemáticos en estadística son más que herramientas de cálculo: son el puente entre la teoría y la práctica en la comprensión de complejas interacciones entre variables...</p>
+                          <a href="https://github.com/luisca1985/mathematical_model_article" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- Repite para otros proyectos -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <div class="image-container">
+                            <img src="img/linear_regression_image.webp" class="card-img-top" alt="Project Image">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Descifrando la Regresión Lineal</h5>
+                        <p class="card-text">La regresión lineal es un método fundamental en el análisis estadístico que se basa esencialmente en dos conceptos clave para establecer la relación entre variables independientes y dependientes...</p>
+                        <a href="https://github.com/username/newsletter1-repo" target="_blank" class="btn btn-primary">View on GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repite para otros proyectos -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <div class="image-container">
+                            <img src="img/r_squared_image.webp" class="card-img-top" alt="Project Image">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Comprendiendo R-squared</h5>
+                        <p class="card-text">El Coeficiente de Determinación R-squared se destaca en estadística por su habilidad para expresar qué proporción de la variación en una variable dependiente es explicada por las variables independientes en un modelo...</p>
+                        <a href="https://github.com/username/newsletter1-repo" target="_blank" class="btn btn-primary">View on GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repite para otros proyectos -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <div class="image-container">
+                            <img src="img/histograms_image.webp" class="card-img-top" alt="Project Image">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Histogramas: Decodificando los Datos</h5>
+                        <p class="card-text">Los histogramas, con su capacidad para transformar datos crudos en visualizaciones comprensibles, juegan un papel crucial en el análisis de datos moderno...</p>
+                        <a href="https://github.com/username/newsletter1-repo" target="_blank" class="btn btn-primary">View on GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repite para otros proyectos -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <div class="image-container">
+                            <img src="img/normal_distribution_image.webp" class="card-img-top" alt="Project Image">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">La Omnipresente Distribución Normal</h5>
+                        <p class="card-text">La Distribución Normal se erige como una figura central en el ámbito de la estadística, distinguida por su forma de campana...</p>
+                        <a href="https://github.com/username/newsletter1-repo" target="_blank" class="btn btn-primary">View on GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repite para otros proyectos -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <div class="image-container">
+                            <img src="img/population_and_estimated_parameters_image.webp" class="card-img-top" alt="Project Image">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Entre Muestras y Patrones: Esculpiendo la Realidad</h5>
+                        <p class="card-text">La estadística desempeña un papel crucial en la comprensión y el análisis de las características poblacionales, especialmente a través del estudio de parámetros como la media y la desviación estándar...</p>
+                        <a href="https://github.com/username/newsletter1-repo" target="_blank" class="btn btn-primary">View on GitHub</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              
+              
+  
         </main>
 
         <!-- Pie de página -->
@@ -39,8 +170,10 @@
     </div>
 
     <!-- Enlace a JS de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.10/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Enlace a JS de Bootstrap y sus dependencias -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
 </body>
 </html>
+

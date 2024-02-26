@@ -30,3 +30,20 @@ footer {
     font-family: "SF Pro Text", Helvetica, sans-serif;
     margin: 0 auto; /* Añade esta línea */
   }
+
+/* Estilos para el contenedor de la imagen */
+.image-container {
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%; /*Proporciona una relación de aspecto de 10:10 */
+  position: relative;
+}
+
+.image-container .card-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto asegura que la imagen se recorte para cubrir el espacio disponible */
+}
