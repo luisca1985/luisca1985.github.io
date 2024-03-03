@@ -1,163 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Portfolio</title>
-    <!-- Enlace a CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Enlace a tu CSS personalizado -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Portfolio</title>
+  <!-- Enlace a CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Enlace a tu CSS personalizado -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div class="container text-center">
-        <!-- Encabezado -->
-        <header class="my-5">
-            <img src="img/profile_image.jpg" alt="Profile Image" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px;">
-            <h1>Luis Camilo Jiménez Álvarez</h1>
-            <p>Data Scientist</p>
-            <p><a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=luis-camilo-jimenez" target="_blank">Follow on LinkedIn</a></p>
-        </header>
-        <!-- Contenido principal -->
-        <main class="mb-5">
-            <h2>Projects Portfolio</h2>
-            <div class="container">
-                <div class="row">
-                  <!-- LinkedIn Newsletter -->
-                  <div class="col-md-4 mb-4">
-                    <div class="card">
-                      <img src="img/newsletter_image.webp" class="card-img-top" alt="Project Image">
-                      <div class="card-body">
-                        <h5 class="card-title">LinkedIn Newsletters</h5>
-                        <p class="card-text">Description.</p>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              View Newsletters
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#ai_and_data_insights">IA & Data Insights</a></li>
-                              <li style="display: none;"><a class="dropdown-item" href="newsletter_projects.html#nl2">Option</a></li>
-                            </ul>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Grupo de proyectos oculto (style="display: none;") -->
-                  <div class="col-md-4 mb-4" style="display: none;">
-                    <div class="card">
-                      <img src="newsletter_image.webp" class="card-img-top" alt="Project Image">
-                      <div class="card-body">
-                        <h5 class="card-title">Newsletter 1</h5>
-                        <p class="card-text">Detailed description of Newsletter 1.</p>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              View Newsletters
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="newsletter_projects.html#nl1">NL1</a></li>
-                              <li><a class="dropdown-item" href="newsletter_projects.html#nl2">NL2</a></li>
-                            </ul>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              
-
+      <!-- Encabezado -->
+      <header class="my-5">
+        <img src="img/profile_image.jpg" alt="Profile Image" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px;">
+        <h1>Luis Camilo Jiménez Álvarez</h1>
+        <p>Data Scientist</p>
+        <p><a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=luis-camilo-jimenez" target="_blank">Follow on LinkedIn</a></p>
+      </header>
+      <!-- Contenido principal -->
+      <main class="mb-5">
+        <div id="app"></div>
+        <script>
+          const vm = Vue.createApp({
+            data(){
+              return {
+                groups:[
+                  {
+                    name: "LinkedIn Newsletters",
+                    description: "Description...",
+                    dropdown_label: "View Newsletters",
+                    img: {
+                      src: "img/newsletter_image.webp",
+                      alt: "Newsletter Image"
+                    },
+                    subgroups: [
+                      {
+                        id: "ai_and_data_insights",
+                        name: "IA & Data Insights"
+                      }
+                    ]
+                  }
+                ],
+                projects:[
+                  {
+                    name: "Modelos Matemáticos: Desvelando Conexiones",
+                    description: "Los modelos matemáticos en estadística son más que herramientas de cálculo: son el puente entre la teoría y la práctica en la comprensión de complejas interacciones entre variables...",
+                    link: {
+                      label: "View on GitHub",
+                      href: "https://github.com/luisca1985/mathematical_model_article"
+                    },
+                    img: {
+                      src: "img/math_models_image.webp",
+                      alt: "Math Models Image"
+                    },
+                    subgroups:[
+                    "ai_and_data_insights"
+                    ]
+                  },
+                  {
+                    name: "Descifrando la Regresión Lineal",
+                    description: "La regresión lineal es un método fundamental en el análisis estadístico que se basa esencialmente en dos conceptos clave para establecer la relación entre variables independientes y dependientes...",
+                    link: {
+                      label: "View on GitHub",
+                      href: "https://github.com/luisca1985/linear_regression_article"
+                    },
+                    img: {
+                      src: "img/linear_regression_image.webp",
+                      alt: "Linear Regression Image"
+                    },
+                    subgroups:[
+                    "ai_and_data_insights"
+                    ]
+                  },
+                  {
+                    name: "Comprendiendo R-squared",
+                    description: "El Coeficiente de Determinación R-squared se destaca en estadística por su habilidad para expresar qué proporción de la variación en una variable dependiente es explicada por las variables independientes en un modelo...",
+                    link: {
+                      label: "View on GitHub",
+                      href: "https://github.com/luisca1985/r_squared_article"
+                    },
+                    img: {
+                      src: "img/r_squared_image.webp",
+                      alt: "R-Squared Image"
+                    },
+                    subgroups:[
+                    "ai_and_data_insights"
+                    ]
+                  },
+                  {
+                    name: "Histogramas: Decodificando los Datos",
+                    description: "Los histogramas, con su capacidad para transformar datos crudos en visualizaciones comprensibles, juegan un papel crucial en el análisis de datos moderno...",
+                    link: {
+                      label: "View on GitHub",
+                      href: "https://github.com/luisca1985/histograms_article"
+                    },
+                    img: {
+                      src: "img/histograms_image.webp",
+                      alt: "Histograms Image"
+                    },
+                    subgroups:[
+                    "ai_and_data_insights"
+                    ]
+                  },
+                  {
+                    name: "La Omnipresente Distribución Normal",
+                    description: "La Distribución Normal se erige como una figura central en el ámbito de la estadística, distinguida por su forma de campana...",
+                    link: {
+                      label: "View on GitHub",
+                      href: "https://github.com/luisca1985/normal_distribution_article"
+                    },
+                    img: {
+                      src: "img/normal_distribution_image.webp",
+                      alt: "Normal Distribution Image"
+                    },
+                    subgroups:[
+                    "ai_and_data_insights"
+                    ]
+                  },
+                  {
+                    name: "Entre Muestras y Patrones: Esculpiendo la Realidad",
+                    description: "La estadística desempeña un papel crucial en la comprensión y el análisis de las características poblacionales, especialmente a través del estudio de parámetros como la media y la desviación estándar...",
+                    link: {
+                      label: "View on GitHub",
+                      href: "https://github.com/luisca1985/population_and_estimated_parameters_article"
+                    },
+                    img: {
+                      src: "img/population_and_estimated_parameters_image.webp",
+                      alt: "Population and Estimated Parameters Image"
+                    },
+                    subgroups:[
+                    "ai_and_data_insights"
+                    ]
+                  }
+                ]
+              }
+            },
+            template:`
+            <div>
+              <h2>Projects Portfolio</h2>
               <div class="container">
-                <h2 id="ai_and_data_insights">LinkedIn Newsletters</h2>
                 <div class="row">
-                    <h3 id="ai_and_data_insights">IA & Data Insights</h3>
-                    <!-- Repite para otros proyectos -->
-                    <div class="col-md-4 mb-4">
-                      <div class="card">
-                        <div class="image-container">
-                              <img src="img/math_models_image.webp" class="card-img-top" alt="Project Image">
+                  <div v-for="(group, index) in groups" :key="index" class="col-md-4 mb-4">
+                    <div class="card">
+                      <img :src="group.img.src" class="card-img-top" :alt="group.img.alt">
+                      <div class="card-body">
+                        <h5 v-text="group.name" class="card-title"/>
+                        <p v-text="group.description" class="card-text"/>
+                        <div class="dropdown">
+                          <button v-text="group.dropdown_label" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
+                          <ul class="dropdown-menu">
+                            <li v-for="(subgroup, index) in group.subgroups"><a v-text="subgroup.name" :href="'#'+subgroup.id" class="dropdown-item"/></li>
+                          </ul>
                         </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Modelos Matemáticos: Desvelando Conexiones</h5>
-                          <p class="card-text">Los modelos matemáticos en estadística son más que herramientas de cálculo: son el puente entre la teoría y la práctica en la comprensión de complejas interacciones entre variables...</p>
-                          <a href="https://github.com/luisca1985/mathematical_model_article" target="_blank" class="btn btn-primary">View on GitHub</a>
-                        </div>
-                      </div>
-                    </div>
-                  <!-- Repite para otros proyectos -->
-                  <div class="col-md-4 mb-4">
-                    <div class="card">
-                      <div class="image-container">
-                            <img src="img/linear_regression_image.webp" class="card-img-top" alt="Project Image">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Descifrando la Regresión Lineal</h5>
-                        <p class="card-text">La regresión lineal es un método fundamental en el análisis estadístico que se basa esencialmente en dos conceptos clave para establecer la relación entre variables independientes y dependientes...</p>
-                        <a href="https://github.com/luisca1985/linear_regression_article" target="_blank" class="btn btn-primary">View on GitHub</a>
                       </div>
                     </div>
                   </div>
-                  <!-- Repite para otros proyectos -->
-                  <div class="col-md-4 mb-4">
-                    <div class="card">
-                      <div class="image-container">
-                            <img src="img/r_squared_image.webp" class="card-img-top" alt="Project Image">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Comprendiendo R-squared</h5>
-                        <p class="card-text">El Coeficiente de Determinación R-squared se destaca en estadística por su habilidad para expresar qué proporción de la variación en una variable dependiente es explicada por las variables independientes en un modelo...</p>
-                        <a href="https://github.com/luisca1985/r_squared_article" target="_blank" class="btn btn-primary">View on GitHub</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Repite para otros proyectos -->
-                  <div class="col-md-4 mb-4">
-                    <div class="card">
-                      <div class="image-container">
-                            <img src="img/histograms_image.webp" class="card-img-top" alt="Project Image">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Histogramas: Decodificando los Datos</h5>
-                        <p class="card-text">Los histogramas, con su capacidad para transformar datos crudos en visualizaciones comprensibles, juegan un papel crucial en el análisis de datos moderno...</p>
-                        <a href="https://github.com/luisca1985/histograms_article" target="_blank" class="btn btn-primary">View on GitHub</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Repite para otros proyectos -->
-                  <div class="col-md-4 mb-4">
-                    <div class="card">
-                      <div class="image-container">
-                            <img src="img/normal_distribution_image.webp" class="card-img-top" alt="Project Image">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">La Omnipresente Distribución Normal</h5>
-                        <p class="card-text">La Distribución Normal se erige como una figura central en el ámbito de la estadística, distinguida por su forma de campana...</p>
-                        <a href="https://github.com/luisca1985/normal_distribution_article" target="_blank" class="btn btn-primary">View on GitHub</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Repite para otros proyectos -->
-                  <div class="col-md-4 mb-4">
-                    <div class="card">
-                      <div class="image-container">
-                            <img src="img/population_and_estimated_parameters_image.webp" class="card-img-top" alt="Project Image">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Entre Muestras y Patrones: Esculpiendo la Realidad</h5>
-                        <p class="card-text">La estadística desempeña un papel crucial en la comprensión y el análisis de las características poblacionales, especialmente a través del estudio de parámetros como la media y la desviación estándar...</p>
-                        <a href="https://github.com/luisca1985/population_and_estimated_parameters_article" target="_blank" class="btn btn-primary">View on GitHub</a>
-                      </div>
-                    </div>
-                  </div>
-
-
                 </div>
               </div>
-              
-              
-  
-        </main>
+
+              <div v-for="(group, index) in groups" class="container">
+                <h2 v-text="group.name"/>
+                <div v-for="(subgroup, index) in group.subgroups" class="row">
+                  <h3 :id="subgroup.id" v-text="subgroup.name" />
+                  <div v-for="(project, index) in projects.filter(p => p.subgroups.includes(subgroup.id))" class="col-md-4 mb-4">
+                    <div class="card">
+                      <div class="image-container">
+                        <img :src="project.img.src" class="card-img-top" :alt="project.img.alt">
+                      </div>
+                      <div class="card-body">
+                        <h5 v-text="project.name" class="card-title"/>
+                        <p v-text="project.description" class="card-text"/>
+                        <a v-text="project.link.label" :href="project.link.href" target="_blank" class="btn btn-primary"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            `
+          }).mount("#app")
+        </script>
+    </main>
 
         <!-- Pie de página -->
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
